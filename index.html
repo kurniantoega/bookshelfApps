@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Bookshelf Apps</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="imageContainer">
+            <img src="assets/img/izzy-park-XxSKVM0Ts7Y-unsplash-min.jpg" alt="Bookshelf Picture" class="image">
+          </div>
+
+        <!-- FORM INPUT BUKU -->
+          <section class="input_section">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBuku">
+              <div class="input">
+                <label for="judulBuku">Judul</label>
+                <input type="text" id="judulBuku" name="judul" required>
+              </div>
+              <div class="input">
+                <label for="penulisBuku">Penulis</label>
+                <input type="text" id="penulisBuku" name="penulis" required>
+              </div>
+              <div class="input">
+                <label for="tahunBuku">Tahun</label>
+                <input type="number" id="tahunBuku" name="tahun" max="2023" value="2002" required>
+              </div>
+              <div class="input_inline">
+                <label for="bukuSelesaiDibaca">Selesai dibaca</label>
+                <input type="checkbox" id="bukuSelesaiDibaca" name="check">
+              </div>
+              <button class="btnSubmit" type="submit" name="submit">Masukkan ke Rak</button>
+            </form>
+          </section>
+        </div>
+
+        <div class="row">
+        <!-- FORM CARI BUKU -->
+          <section class="search_section">
+            <h2>Cari Buku</h2>
+            <form id="cariBuku">
+              <input type="text" id="cariJudulBuku" placeholder="Masukkan Judul Buku">
+            </form>
+          </section>
+        </div>
+
+        <div class="row">
+          <section class="rak_buku">
+            <h2>Belum Selesai Dibaca</h2>
+            <div id="listBukuBelumSelesai" class="listBuku">
+            </div>
+          </section>
+
+          <section class="rak_buku">
+            <h2>Selesai Dibaca</h2>
+            <div id="listBukuSelesai" class="listBuku">         
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Bookshelf Apps | Kurnianto</p>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

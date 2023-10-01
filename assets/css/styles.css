@@ -1,0 +1,244 @@
+:root {
+  --warna-primer: #FEFAE0;
+  --warna-sekunder: #BC6C25;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--warna-primer);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: var(--warna-sekunder);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--warna-sekunder);
+}
+
+.row {
+  display:flex;
+  flex-direction: row;
+  width: 80%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+input, button {
+  font-size: 1rem;
+}
+
+header, h2 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================== */
+/*                 IMAGE                */
+/* ==================================== */
+.imageContainer {
+  display: flex;
+  width: 60%;
+  border-radius: 10px;
+}
+.imageContainer > .image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ==================================== */
+/*              FORM INPUT              */
+/* ==================================== */
+.input_section {
+  display: flex;
+  flex-direction: column;
+  min-width: 38%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+.input_section > form > .input {
+  padding-top: 10px;
+  color: var(--warna-sekunder);
+}
+.input_section > form > .input > label,
+.input_section > form > .input_inline > label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.input_section > form > .input_inline {
+  display: flex;
+  padding-top: 20px;
+  color: var(--warna-sekunder);
+}
+.input_section > form > .input_inline > label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.input_section > form > .input_inline > input {
+  color: var(--warna-sekunder);
+  cursor: pointer;
+}
+/* FORM INPUT & SEARCH */
+.input_section > form > .input > input,
+.search_section > form > input {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border-color: var(--warna-sekunder);
+}
+/* BUTTON INPUT */
+.input_section > form > button {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--warna-sekunder);
+  color: white;
+  border: 2px solid var(--warna-sekunder);
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+}
+.input_section > form > button:hover {
+  background-color: white;
+  color: var(--warna-sekunder);
+  border: 2px solid var(--warna-sekunder);
+}
+
+/* ==================================== */
+/*           CARI JUDUL BUKU            */
+/* ==================================== */
+.search_section {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+.search_section > #cariBuku {
+  margin-top: 10px;
+}
+.search_section > #cariBuku > input {
+  background-image: url('../img/icons-search.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 40px;
+}
+
+/* ==================================== */
+/*               RAK BUKU               */
+/* ==================================== */
+.rak_buku {
+  width: 49%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.rak_buku > .listBuku > .detailBuku > h3, p{
+  margin: 8px 0;
+}
+.detailBuku {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid var(--warna-sekunder);
+  border-radius: 10px;
+}
+/* Button Detail Buku */
+.rak_buku > .listBuku > .detailBuku > .action > button {
+  padding: 8px;
+  cursor: pointer;
+  background-color: white;
+  color: var(--warna-sekunder);
+  border: 2px solid var(--warna-sekunder);
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+.rak_buku > .listBuku > .detailBuku > .action > .done {
+  background-color: green;
+  color: white;
+  border: 2px solid green;
+}
+.rak_buku > .listBuku > .detailBuku > .action > .delete {
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+}
+.rak_buku > .listBuku > .detailBuku > .action > .undo {
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
+}
+.rak_buku > .listBuku > .detailBuku > .action > .done:hover,
+.rak_buku > .listBuku > .detailBuku > .action > .delete:hover,
+.rak_buku > .listBuku > .detailBuku > .action > .undo:hover {
+  filter: brightness(45%);
+  transition: all .2s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: var(--warna-sekunder);
+  color: var(--warna-primer);
+  font-weight: bold;
+}
+
+/* ==================================== */
+/*                SHADOW                */
+/* ==================================== */
+.imageContainer, 
+.input_section, 
+.search_section, 
+.rak_buku,
+.input_section > form > button,
+.input_section > form > button:hover,
+.rak_buku > .listBuku > .detailBuku > .action > button  {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================== */
+/*               RESPONSIF              */
+/* ==================================== */
+@media screen and (max-width: 992px) {
+  .row {
+    flex-direction: column;
+  }
+  .input_section {
+    margin-top: 20px;
+  }
+  .imageContainer {
+    width: 100%;
+  }
+  .imageContainer > .image {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .rak_buku {
+    width: 100%;
+  }
+}
