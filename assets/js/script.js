@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function tambahBuku() {
   const title = document.getElementById('judulBuku').value;
   const author = document.getElementById('penulisBuku').value;
-  const year = document.getElementById('tahunBuku').value;
+  const year = parseInt(document.getElementById('tahunBuku').value);
   const isComplete = document.getElementById('bukuSelesaiDibaca');
   const id = generateId();
   
